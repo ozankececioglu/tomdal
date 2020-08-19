@@ -1,6 +1,8 @@
+import base64
+
 def tomdalling():
     with open(r"C:\ws\trash\personal\tomdal\q2.txt", 'r') as inp:
-        bb = bytearray(base64.a85decode(inp.read()))
+        bb = bytearray(base64.a85decode(inp.read(), adobe=True))
 
         # last = bb[-1] & 1
         for i in range(len(bb)):
